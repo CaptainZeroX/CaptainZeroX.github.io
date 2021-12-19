@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100;700&display=swap');
+
+
+
+html,
+body{
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  text-align: center;
+  scroll-behavior: smooth;
+  
+  
+}
+#welcome-section {
+  line-height:20px;
+  text-align:center;
+  padding-top: 320px;
+  padding-bottom:320px;
+  letter-spacing: 3px;
+  background-color:#1f201f;
+  
+}
+#welcome-section h1{
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 0px;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-weight:700;
+  color:#d7dae4;  
+
+}
+#welcome-section p{
+  font-size: clamp(1rem, 1vw + 0.6rem, 3rem);
+  color:#b41022;
+  font-style:italic;
+  z-index: 2;
+
+}
+
+  
+#navbar{
+}
+#navbar ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1;
+
+}
+#navbar li{
+  text-align:right;
+  float: right;
+ 
+}
+#navbar li a{
+  display: block;
+  color:#d7dae4;
+  text-align: center;
+  font-size: clamp(1rem, 1vw + 0.6rem, 3rem);
+  font-weight: 500;
+  padding: 16px 25px;
+  text-decoration: none;
+}
+#navbar ul li a,
+#navbar ul li a:after,
+#navbar ul li a:before {
+  transition: all .5s;
+}
+#navbar ul li a:hover {
+  color: #b41022;
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #b41022;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+.Name{
+  color: hsl(0 0% 0% / 0.7);
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.subtitle {
+  color: hsl(0 0% 0% / 0.7);
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease forwards;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#projects{
+  line-height:5px;
+  text-align:center;
+  padding-top: 100px;
+  padding-bottom:1px;
+  letter-spacing: 2px;
+  background-color:#b41022;
+  
+}
+#projects h1{
+  text-decoration:underline;
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 0px;
+  margin: 0 auto 6rem auto;
+  font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+  font-weight:300;
+  color:white;  
+  
+  
+  
+}
+.project-img{
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.projects-sect {
+  text-align: center;
+
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.grid p{
+  font-size: clamp(1rem, 3vw + 1rem, 2rem);
+}
+img{
+  display: block;
+  width: 100%;
+}
+#contact{
+  background-color:#1f201f;
+  line-height:100px;
+  text-align:center;
+  padding-top: 40px;
+  padding-bottom:20px;
+  letter-spacing: 2px;
+  
+}
+#contact h1 {
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 0px;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-weight:300;
+  color:#d7dae4;  
+  
+}
+a{
+  color:white;
+  text-decoration:none;
+}
+.contact-details{
+  margin-left:50px;
+}
+.btn {
+  display: inline-block;
+  font-size:clamp(1rem, 3vw + 1rem, 1.5rem);
+  padding: 2rem 0rem;
+ 
+}
+.fas{
+  transition: transform 0.5s ease-out;
+}
+
+.btn-show-all:hover > i{
+  transform: translateX(8px);
+  
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: clamp(1rem, 3vw + 1rem, 1.4rem);
+ 
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(-8px);
+}
+@media (max-width: 31em) {
+  #projects h1{
+    font-size:22px;
+  }
+}
+ @media (max-width:60em){
+    #welcome-section{
+      padding-top:335px;
+      padding-bottom:335px;
+    }
+    
+  }
+  @media (max-width:500px){
+    #welcome-section{
+      padding-top:340px;
+      padding-bottom:340px;
+    }
+    
+  }
+.project-tile{
+  background: #1f201f;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: transform 0.3s ease-out, background 0.3s ease-out;
+  
+}
+.project-tile:hover{
+  transform:translateY(-10px);
+  background:#667399;
+}
+@media (max-width:920px){
+  .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+}
+}
